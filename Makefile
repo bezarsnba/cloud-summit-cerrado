@@ -1,2 +1,2 @@
 run:
- packer build .
+	packer build .
