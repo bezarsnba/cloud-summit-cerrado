@@ -1,0 +1,25 @@
+---
+# tasks file for nginx
+  - name: Cloud Summit Cerrado | install nginx
+    apt: 
+      name: nginx 
+      state: latest
+
+  - name: Cloud Summit Cerrado | send nginx.conf to sites-enabled
+    copy:
+       src: files/nginx.conf
+       dest: /etc/nginx/sites-enabled/default
+
+  - name: Cloud Summit Cerrado | send nginx to sites-available
+    copy:
+       src: files/nginx.conf
+       dest: /etc/nginx/sites-available/default
+
+  - name: Cloud Summit Cerrado | send index.html to index.html
+    copy:
+       src: files/index.html
+       dest: /usr/share/nginx/html/index.html
+       mode: 0644
+
+  - name: Cloud Summit Cerrado | Make sure a service is running
+    systemd: state=restarted name=nginx

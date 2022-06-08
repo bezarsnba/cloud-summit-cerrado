@@ -1,0 +1,5 @@
+service_account.json
+ansible/.DS_Store
+.vagrant/*
+ansible/roles/setup/.DS_Store
+Vagrantfile
