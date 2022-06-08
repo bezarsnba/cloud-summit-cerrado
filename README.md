@@ -7,7 +7,7 @@ This repo have configurations utilized in event Cloud Summit Cerrado Goiania, wh
 * ansible: repo where contain rules install nginx;
 * build.pkr.hcl, source.pkr.hcl and variables.pkr.hcl: Files where contain structure about Packer
 
-# Requiremment
+## pre requiremment
 
 * Account GCP
 * Service account
